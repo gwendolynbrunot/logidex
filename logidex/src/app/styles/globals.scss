@@ -1,0 +1,236 @@
+@import  "bootstrap/dist/css/bootstrap.min.css";
+
+// Brand Theme
+// Colors
+$primary-100: #3532C7;
+$primary-75: #6865D5;
+$primary-50: #9A99E3;
+$primary-25: #CCCBF1;
+$primary-10: #EBEBFA;
+$secondary-100: #44B2E2;
+$secondary-75: #73C5E9;
+$secondary-50: #A2D9F1;
+$secondary-25: #D0EBF7;
+$secondary-10: #EDF8FD;
+$tertiary-100: #7070C8;
+$tertiary-75: #9494D6;
+$tertiary-50: #B8B8E4;
+$tertiary-25: #DBDBF1;
+$tertiary-10: #F1F1FA;
+$spot-purple-100: #3E1480;
+$spot-purple-75: #6E4FA0;
+$spot-purple-50: #9F8AC0;
+$spot-purple-25: #CEC4DF;
+$spot-purple-10: #ECE8F3;
+$spot-lavender-100: #7F65E0;
+$spot-lavender-75: #9F8CE8;
+$spot-lavender-50: #BFB2F0;
+$spot-lavender-25: #DFD8F7;
+$spot-lavender-10: #F3F0FC;
+$text-on-dark: #FFFFFF;
+
+// Placeholder Colors
+$dark-gray: rgb(55, 55, 55);
+$medium-gray: rgb(112, 112, 112);
+$light-gray: rgb(222, 222, 222);
+
+// Spacing
+$sp-xx-large: 12rem;
+$sp-x-large: 9rem;
+$sp-large: 6rem;
+$sp-medium: 3rem;
+$sp-small: 1.5rem;
+$sp-x-small: 0.65rem;
+
+// Standard Border Radius
+$border-radius: 100px;
+
+// Font Styles
+$h1-size: 4rem;
+$h2-size: 3rem;
+$p-small-size: 1rem;
+$p-large-size: 1.5rem;
+$a-size-small: 1.5rem;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  color: $dark-gray;
+  height: 100vh;
+}
+
+h1 {
+  font-size: h1-size;
+}
+
+h2 {
+  font-size: h2-size;
+}
+
+p {
+  font-size: $p-small-size;
+}
+
+a {
+  font-size: $a-size-small;
+}
+
+// Main Layout
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.main-app-content {
+  padding: $sp-x-large;
+}
+
+.main-content-wrapper {
+  background-color: white;
+  height: 100%;
+}
+
+// Button Styles
+.btn {
+  display: flex;
+  gap: $sp-x-small;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: none;
+  font-size: $p-large-size;
+  width: max-content;
+}
+
+.btn-secondary-on-dark {
+  background-color: white;
+  color: $dark-gray;
+}
+
+.btn-secondary-on-dark:hover {
+  background-color: $medium-gray;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: $dark-gray;
+  color: white;
+
+  transition: 0.25s;
+}
+
+// Navbar Styles
+.navbar {
+  position: absolute;
+  height: fit-content;
+  width: 100%;
+  padding: 0px 20%;
+  bottom: 50px;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $light-gray;
+  border-radius: 60px;
+}
+
+.navbar-inner {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 80%;
+  padding: 2rem 4rem;
+  align-items: center;
+  justify-content: space-between;
+  color: $dark-gray;
+  overflow: hidden;
+  gap: $sp-medium;
+}
+
+.navbar-links-wrapper {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: $sp-medium;
+  width: 100%;
+}
+
+.navbar-links-wrapper a {
+  color: black;
+  width: 100%;
+  text-decoration: none;
+}
+
+.navbar-links-wrapper a:hover {
+  color: white;
+
+  transition: 0.25s;
+}
+
+.navIcon {
+  font-size: 2rem;
+}
+
+// .navLink-home, .navLink-decisions, .navLink-new, .navLink-audit {
+
+// }
+
+// Home Page Dashboard Styles
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-medium;
+}
+
+.dashboard-top-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: $sp-medium;
+}
+
+.pending-decisions-wrapper, .recent-activity-wrapper, .quick-actions {
+  width: 100%;
+  border-radius: 20px;
+  background-color: $light-gray;
+  padding: $sp-medium;
+}
+
+.quick-actions-links {
+  width: 100%;
+  display: flex;
+  gap: $sp-small;
+}
+
+// .sign-out-wrapper {
+
+// }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+
+}

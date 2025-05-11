@@ -78,13 +78,12 @@ a {
 // Main Layout
 .site-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   height: 100%;
 }
 
 .main-app-content {
-  padding: $sp-x-large;
+  height: calc(100% - 150px);
+  padding: $sp-large $sp-large $sp-medium $sp-large;
 }
 
 .main-content-wrapper {
@@ -123,6 +122,7 @@ a {
 // Navbar Styles
 .navbar {
   position: absolute;
+  align-self: flex-end;
   height: fit-content;
   width: 100%;
   padding: 0px 20%;
@@ -133,7 +133,7 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: $light-gray;
+  background-color: $medium-gray;
   border-radius: 60px;
 }
 
@@ -159,19 +159,19 @@ a {
 }
 
 .navbar-links-wrapper a {
-  color: black;
+  color: $light-gray;
   width: 100%;
   text-decoration: none;
 }
 
-.navbar-links-wrapper a:hover {
+.navIcon {
+  font-size: 2.35rem;
+}
+
+.navIcon i:hover {
   color: white;
 
   transition: 0.25s;
-}
-
-.navIcon {
-  font-size: 2rem;
 }
 
 // .navLink-home, .navLink-decisions, .navLink-new, .navLink-audit {
@@ -183,6 +183,16 @@ a {
   display: flex;
   flex-direction: column;
   gap: $sp-medium;
+  height: 100%;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  height: 100%;
+  gap: $sp-medium;
+  align-items: stretch;
 }
 
 .dashboard-top-actions {
@@ -190,19 +200,25 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
+  height: 50%;
   gap: $sp-medium;
 }
 
 .pending-decisions-wrapper, .recent-activity-wrapper, .quick-actions {
   width: 100%;
+  height: 100%;
   border-radius: 20px;
   background-color: $light-gray;
   padding: $sp-medium;
 }
 
+.quick-actions {
+  height: 50%;
+}
+
 .quick-actions-links {
-  width: 100%;
   display: flex;
+  width: 100%;
   gap: $sp-small;
 }
 

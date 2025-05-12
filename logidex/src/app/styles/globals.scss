@@ -1,33 +1,43 @@
 @import  "bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200..900&display=swap');
 
 // Brand Theme
 // Colors
-$primary-100: #3532C7;
-$primary-75: #6865D5;
-$primary-50: #9A99E3;
-$primary-25: #CCCBF1;
-$primary-10: #EBEBFA;
-$secondary-100: #44B2E2;
-$secondary-75: #73C5E9;
-$secondary-50: #A2D9F1;
-$secondary-25: #D0EBF7;
-$secondary-10: #EDF8FD;
-$tertiary-100: #7070C8;
-$tertiary-75: #9494D6;
-$tertiary-50: #B8B8E4;
-$tertiary-25: #DBDBF1;
-$tertiary-10: #F1F1FA;
-$spot-purple-100: #3E1480;
-$spot-purple-75: #6E4FA0;
-$spot-purple-50: #9F8AC0;
-$spot-purple-25: #CEC4DF;
-$spot-purple-10: #ECE8F3;
-$spot-lavender-100: #7F65E0;
-$spot-lavender-75: #9F8CE8;
-$spot-lavender-50: #BFB2F0;
-$spot-lavender-25: #DFD8F7;
-$spot-lavender-10: #F3F0FC;
+$red-100: #EE7676;
+$red-90: #F08484;
+$red-80: #F19191;
+$red-70: #F39F9F;
+$red-60: #F5ADAD;
+$red-50: #F7BBBB;
+$red-40: #F8C8C8;
+$red-30: #FAD6D6;
+$red-20: #FCE4E4;
+$red-10: #FEF2F2;
+$yellow-100: #F2D67D;
+$yellow-90: #F3DB8A;
+$yellow-80: #F4DE97;
+$yellow-70: #F6E3A4;
+$yellow-60: #F7E6B1;
+$yellow-50: #F8EBBE;
+$yellow-40: #F9EFCB;
+$yellow-30: #FBF3D8;
+$yellow-20: #FCF7E5;
+$yellow-10: #FEFBF2;
+$blue-100: #7093EB;
+$blue-90: #7F9EED;
+$blue-80: #8DA9EF;
+$blue-70: #9BB4F1;
+$blue-60: #A9BEF3;
+$blue-50: #B8C9F5;
+$blue-40: #C6D4F7;
+$blue-30: #D5DFF9;
+$blue-20: #E2E9FB;
+$blue-10: #F1F5FD;
 $text-on-dark: #FFFFFF;
+$text-on-light: #323C55;
+
+$background-light: $blue-10;
+$background-dark: #323C55;
 
 // Placeholder Colors
 $dark-gray: rgb(55, 55, 55);
@@ -46,28 +56,37 @@ $sp-x-small: 0.65rem;
 $border-radius: 100px;
 
 // Font Styles
-$h1-size: 4rem;
-$h2-size: 3rem;
-$p-small-size: 1rem;
-$p-large-size: 1.5rem;
+$h1-size: 3.3rem;
+$h2-size: 2.3rem;
+$p-small-size: 1.5rem;
+$p-large-size: 2rem;
 $a-size-small: 1.5rem;
 
+$primary-font-family: "Mada", sans-serif;
+
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: white;
-  color: $dark-gray;
+  font-family: $primary-font-family;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  background-color: $background-light;
+  color: $text-on-light;
   height: 100vh;
 }
 
+h1, h2, p, a {
+  font-weight: 400;
+}
+
 h1 {
-  font-size: h1-size;
+  font-size: $h1-size;
 }
 
 h2 {
-  font-size: h2-size;
+  font-size: $h2-size;
 }
 
-p {
+p, li {
   font-size: $p-small-size;
 }
 
@@ -87,7 +106,6 @@ a {
 }
 
 .main-content-wrapper {
-  background-color: white;
   height: 100%;
 }
 
@@ -98,18 +116,21 @@ a {
   border-radius: 30px;
   padding: 10px 20px;
   border: none;
-  font-size: $p-large-size;
+  font-size: $p-small-size;
+  font-weight: 500;
   width: max-content;
 }
 
 .btn-secondary-on-dark {
-  background-color: white;
-  color: $dark-gray;
+  background-color: transparent;
+  border: solid 3px white;
+  color: white;
 }
 
 .btn-secondary-on-dark:hover {
-  background-color: $medium-gray;
-  color: white;
+  background-color: $yellow-100;
+  border-color: $yellow-100;
+  color: $text-on-light;
 }
 
 .btn-secondary:hover {
@@ -133,7 +154,7 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: $medium-gray;
+  background-color: $background-dark;
   border-radius: 60px;
 }
 
@@ -145,7 +166,7 @@ a {
   padding: 2rem 4rem;
   align-items: center;
   justify-content: space-between;
-  color: $dark-gray;
+  color: $blue-10;
   overflow: hidden;
   gap: $sp-medium;
 }
@@ -159,17 +180,17 @@ a {
 }
 
 .navbar-links-wrapper a {
-  color: $light-gray;
   width: 100%;
   text-decoration: none;
 }
 
 .navIcon {
+  color: white;
   font-size: 2.35rem;
 }
 
 .navIcon i:hover {
-  color: white;
+  color: $yellow-100;
 
   transition: 0.25s;
 }
@@ -193,6 +214,7 @@ a {
   height: 100%;
   gap: $sp-medium;
   align-items: stretch;
+  padding: 0;
 }
 
 .dashboard-top-actions {
@@ -208,7 +230,7 @@ a {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  background-color: $light-gray;
+  background-color: $blue-30;
   padding: $sp-medium;
 }
 

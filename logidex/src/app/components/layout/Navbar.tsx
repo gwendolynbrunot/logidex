@@ -12,7 +12,7 @@ export default function Navbar() {
         </div>
         <div className="sign-out-wrapper">
           <button className="btn btn-secondary-on-dark">
-            <i className="bi bi-box-arrow-right"></i>
+            <i className="bi bi-box-arrow-right btn-icon"></i>
             Sign Out
           </button>
         </div>

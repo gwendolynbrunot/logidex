@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="dashboard-wrapper">
-      <h1 className="">Dashboard</h1>
+    <div className="page-wrapper">
+      <h1 className="h1">Dashboard</h1>
       <div className="container-fluid dashboard-container">
         <section className="dashboard-top-actions">
           <div className="pending-decisions-wrapper">

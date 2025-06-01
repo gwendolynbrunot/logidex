@@ -33,11 +33,16 @@ $blue-40: #C6D4F7;
 $blue-30: #D5DFF9;
 $blue-20: #E2E9FB;
 $blue-10: #F1F5FD;
+
+$dark-blue: #323C55;
+
 $text-on-dark: #FFFFFF;
-$text-on-light: #323C55;
+$text-on-light: $dark-blue;
 
 $background-light: $blue-10;
-$background-dark: #323C55;
+$background-dark: $dark-blue;
+
+$border-dark: $dark-blue;
 
 // Placeholder Colors
 $dark-gray: rgb(55, 55, 55);
@@ -114,6 +119,7 @@ a {
 // Button Styles
 .btn {
   display: flex;
+  align-items: center;
   gap: $sp-x-small;
   border-radius: 30px;
   padding: 5px 20px;
@@ -121,6 +127,20 @@ a {
   font-size: $p-small-size;
   font-weight: 500;
   width: max-content;
+
+  transition: 0.25s;
+}
+
+.btn-primary-on-light {
+  background-color: $dark-blue;
+  border: solid 3px $border-dark;
+  color: $text-on-dark;
+}
+
+.btn-primary-on-light:hover {
+  background-color: transparent;
+  border: solid 3px $border-dark;
+  color: $text-on-light;
 }
 
 .btn-secondary-on-dark {
@@ -138,8 +158,6 @@ a {
 .btn-secondary:hover {
   background-color: $dark-gray;
   color: white;
-
-  transition: 0.25s;
 }
 
 .btn-icon {
@@ -148,18 +166,20 @@ a {
 
 // Navbar Styles
 .navbar {
+  display: flex;
   position: absolute;
-  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
   height: fit-content;
   width: 100%;
   padding: 0px 24%;
   bottom: 50px;
+  gap: $sp-medium;
 }
 
 .navbar-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
   background-color: $background-dark;
   border-radius: 60px;
 }
@@ -168,20 +188,20 @@ a {
   display: flex;
   flex-direction: row;
   height: 80px;
-  width: 80%;
+  width: 100%;
   padding: 2rem 4rem;
   align-items: center;
   justify-content: space-between;
   color: $blue-10;
   overflow: hidden;
-  gap: $sp-medium;
+  gap: $sp-large;
 }
 
 .navbar-links-wrapper {
   display: flex;
   flex-direction: row;
   text-align: center;
-  gap: $sp-medium;
+  gap: $sp-large;
   width: 100%;
 }
 
@@ -201,12 +221,27 @@ a {
   transition: 0.25s;
 }
 
+//New Decision Button
+.new-dec-btn-wrapper {
+  width: auto;
+}
+
+.new-decision-btn {
+  color: #323C55;
+  background-color: #7093EB;
+  border: #7093EB 3px solid;
+}
+
+.new-icon {
+  font-size: 1.75rem;
+}
+
 // .navLink-home, .navLink-decisions, .navLink-new, .navLink-audit {
 
 // }
 
 // Home Page Dashboard Styles
-.dashboard-wrapper {
+.page-wrapper {
   display: flex;
   flex-direction: column;
   gap: $sp-medium;
@@ -248,6 +283,89 @@ a {
   display: flex;
   width: 100%;
   gap: $sp-small;
+}
+
+// Modal Style
+.modal-backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b212fbe;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-light;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  padding: $sp-small;
+}
+
+.modal-content h2 {
+  color: $text-on-light;
+}
+
+.dec-form-wrapper {
+  padding: 0 $sp-medium $sp-small $sp-medium;
+}
+
+.dec-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  gap: $sp-small;
+}
+
+.dec-form input, .dec-form textarea {
+  font-size: $p-small-size;
+  padding: 15px 20px;
+  border: 1px $border-dark solid;
+}
+
+.dec-form input {
+  border-radius: 30px;
+}
+
+.dec-form textarea {
+  min-height: 150px;
+  border-radius: 20px;
+}
+
+.dec-form button {
+  margin: auto;
+}
+
+.close-btn {
+  float: right;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.close-icon {
+  font-size: 1.4rem;
+}
+
+// New Decision Form Styles
+.decision-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $sp-medium;
+  height: fit-content;
+  width: fit-content;
+  min-width: 500px;
+  background-color: $background-dark;
+  border-radius: 20px;
+  padding: $sp-medium;
+}
+
+.decision-form-input {
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
 }
 
 // .sign-out-wrapper {

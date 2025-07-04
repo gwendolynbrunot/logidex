@@ -2,60 +2,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Mada:wght@200..900&display=swap');
 
 // Brand Theme
-// Colors
-$red-100: #EE7676;
-$red-90: #F08484;
-$red-80: #F19191;
-$red-70: #F39F9F;
-$red-60: #F5ADAD;
-$red-50: #F7BBBB;
-$red-40: #F8C8C8;
-$red-30: #FAD6D6;
-$red-20: #FCE4E4;
-$red-10: #FEF2F2;
-$yellow-100: #F2D67D;
-$yellow-90: #F3DB8A;
-$yellow-80: #F4DE97;
-$yellow-70: #F6E3A4;
-$yellow-60: #F7E6B1;
-$yellow-50: #F8EBBE;
-$yellow-40: #F9EFCB;
-$yellow-30: #FBF3D8;
-$yellow-20: #FCF7E5;
-$yellow-10: #FEFBF2;
-$blue-100: #7093EB;
-$blue-90: #7F9EED;
-$blue-80: #8DA9EF;
-$blue-70: #9BB4F1;
-$blue-60: #A9BEF3;
-$blue-50: #B8C9F5;
-$blue-40: #C6D4F7;
-$blue-30: #D5DFF9;
-$blue-20: #E2E9FB;
-$blue-10: #F1F5FD;
-$text-on-dark: #FFFFFF;
-$text-on-light: #323C55;
 
-$background-light: $blue-10;
-$background-dark: #323C55;
+/* --- Colors --- */
 
-// Placeholder Colors
-$dark-gray: rgb(55, 55, 55);
-$medium-gray: rgb(112, 112, 112);
-$light-gray: rgb(222, 222, 222);
+// Primary
+$primary-dark-blue: #293648;
+$primary-off-white: #F6F7F9;
+$primary-white: #FFFFFF;
 
-// Spacing
-$sp-xx-large: 12rem;
-$sp-x-large: 9rem;
-$sp-large: 6rem;
-$sp-medium: 3rem;
-$sp-small: 1.5rem;
-$sp-x-small: 0.65rem;
+// Accent
+$accent-pink: #F15BB5;
+$accent-green: #AEFF4C;
+$accent-teal: #44B2E2;
 
-// Standard Border Radius
+// Text
+$text-light: $primary-off-white;
+$text-on-light: $primary-dark-blue;
+$text-link: #0065F2;
+$text-link-light: #C7DDFF;
+
+// Surface
+$background-light: $primary-white;
+$background-dark: $primary-dark-blue;
+$card-light: $primary-off-white;
+$card-dark: $primary-dark-blue;
+
+// Border
+$border-light: #D9DBE3;
+$border-dark: #58595d;
+
+// Indicator
+$indicator-in-progress: #F15BB5;
+$indicator-draft: #E26E44;
+$indicator-in-review: #BF00FF;
+$indicator-approved: #69CF55;
+$indicator-completed: #5081EB;
+
+/* --- Spacing --- */
+
+// Padding
+$padding-x-small: 1rem; // 16px
+$padding-small: 1.5rem; // 24px
+$padding-medium: 3rem; // 48px
+$padding-large: 6rem; // 96px
+
+// Gap
+$gap-x-small: 1rem; // 16px
+$gap-small: 1.5rem; // 24px
+$gap-smedium: 1.875rem; // 30px
+$gap-medium: 3rem; // 48px
+$gap-large: 6rem; // 96px
+
+// Border Radius
 $border-radius: 100px;
+$border-radius-card: 1rem;
 
-// Font Styles
+/* --- Fonts --- */
 $h1-size: 3.3rem;
 $h2-size: 2rem;
 $p-large-size: 1.4rem;
@@ -104,7 +106,7 @@ a {
 
 .main-app-content {
   height: calc(100% - 150px);
-  padding: $sp-large $sp-large $sp-medium $sp-large;
+  padding: $padding-large $padding-large $padding-medium $padding-large;
 }
 
 .main-content-wrapper {
@@ -114,13 +116,28 @@ a {
 // Button Styles
 .btn {
   display: flex;
-  gap: $sp-x-small;
+  align-items: center;
+  gap: $padding-x-small;
   border-radius: 30px;
   padding: 5px 20px;
   border: none;
   font-size: $p-small-size;
   font-weight: 500;
   width: max-content;
+
+  transition: 0.25s;
+}
+
+.btn-primary-on-light {
+  background-color: $primary-dark-blue;
+  border: solid 3px $border-dark;
+  color: $text-light;
+}
+
+.btn-primary-on-light:hover {
+  background-color: transparent;
+  border: solid 3px $border-dark;
+  color: $text-on-light;
 }
 
 .btn-secondary-on-dark {
@@ -138,8 +155,6 @@ a {
 .btn-secondary:hover {
   background-color: $dark-gray;
   color: white;
-
-  transition: 0.25s;
 }
 
 .btn-icon {
@@ -148,18 +163,20 @@ a {
 
 // Navbar Styles
 .navbar {
+  display: flex;
   position: absolute;
-  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
   height: fit-content;
   width: 100%;
   padding: 0px 24%;
   bottom: 50px;
+  gap: $padding-medium;
 }
 
 .navbar-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
   background-color: $background-dark;
   border-radius: 60px;
 }
@@ -168,20 +185,20 @@ a {
   display: flex;
   flex-direction: row;
   height: 80px;
-  width: 80%;
+  width: 100%;
   padding: 2rem 4rem;
   align-items: center;
   justify-content: space-between;
   color: $blue-10;
   overflow: hidden;
-  gap: $sp-medium;
+  gap: $padding-large;
 }
 
 .navbar-links-wrapper {
   display: flex;
   flex-direction: row;
   text-align: center;
-  gap: $sp-medium;
+  gap: $padding-large;
   width: 100%;
 }
 
@@ -201,15 +218,30 @@ a {
   transition: 0.25s;
 }
 
+//New Decision Button
+.new-dec-btn-wrapper {
+  width: auto;
+}
+
+.new-decision-btn {
+  color: $text-light;
+  background-color: $background-dark;
+  border: $border-dark 3px solid;
+}
+
+.new-icon {
+  font-size: 1.75rem;
+}
+
 // .navLink-home, .navLink-decisions, .navLink-new, .navLink-audit {
 
 // }
 
 // Home Page Dashboard Styles
-.dashboard-wrapper {
+.page-wrapper {
   display: flex;
   flex-direction: column;
-  gap: $sp-medium;
+  gap: $padding-medium;
   height: 100%;
 }
 
@@ -218,7 +250,7 @@ a {
   flex-direction: column;
   height: 100%;
   height: 100%;
-  gap: $sp-medium;
+  gap: $padding-medium;
   align-items: stretch;
   padding: 0;
 }
@@ -229,7 +261,7 @@ a {
   justify-content: space-evenly;
   width: 100%;
   height: 50%;
-  gap: $sp-medium;
+  gap: $padding-medium;
 }
 
 .pending-decisions-wrapper, .recent-activity-wrapper, .quick-actions {
@@ -237,7 +269,7 @@ a {
   height: 100%;
   border-radius: 20px;
   background-color: $blue-30;
-  padding: $sp-medium;
+  padding: $padding-medium;
 }
 
 .quick-actions {
@@ -247,7 +279,90 @@ a {
 .quick-actions-links {
   display: flex;
   width: 100%;
-  gap: $sp-small;
+  gap: $padding-small;
+}
+
+// Modal Style
+.modal-backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b212fbe;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-light;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  padding: $padding-small;
+}
+
+.modal-content h2 {
+  color: $text-on-light;
+}
+
+.dec-form-wrapper {
+  padding: 0 $padding-medium $padding-small $padding-medium;
+}
+
+.dec-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  gap: $padding-small;
+}
+
+.dec-form input, .dec-form textarea {
+  font-size: $p-small-size;
+  padding: 15px 20px;
+  border: 1px $border-dark solid;
+}
+
+.dec-form input {
+  border-radius: 30px;
+}
+
+.dec-form textarea {
+  min-height: 150px;
+  border-radius: 20px;
+}
+
+.dec-form button {
+  margin: auto;
+}
+
+.close-btn {
+  float: right;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.close-icon {
+  font-size: 1.4rem;
+}
+
+// New Decision Form Styles
+.decision-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $padding-medium;
+  height: fit-content;
+  width: fit-content;
+  min-width: 500px;
+  background-color: $background-dark;
+  border-radius: 20px;
+  padding: $padding-medium;
+}
+
+.decision-form-input {
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
 }
 
 // .sign-out-wrapper {

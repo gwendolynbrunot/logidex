@@ -17,7 +17,7 @@ $accent-teal: #44B2E2;
 
 // Text
 $text-light: $primary-off-white;
-$text-on-light: $primary-dark-blue;
+$text-dark: $primary-dark-blue;
 $text-link: #0065F2;
 $text-link-light: #C7DDFF;
 
@@ -74,7 +74,7 @@ body {
   font-style: normal;
   font-weight: 400;
   background-color: $background-light;
-  color: $text-on-light;
+  color: $text-dark;
   height: 100vh;
 }
 
@@ -137,7 +137,7 @@ a {
 .btn-primary-on-light:hover {
   background-color: transparent;
   border: solid 3px $border-dark;
-  color: $text-on-light;
+  color: $text-dark;
 }
 
 .btn-secondary-on-dark {
@@ -147,13 +147,13 @@ a {
 }
 
 .btn-secondary-on-dark:hover {
-  background-color: $yellow-100;
-  border-color: $yellow-100;
-  color: $text-on-light;
+  background-color: $background-dark;
+  border-color: $primary-dark-blue;
+  color: $text-dark;
 }
 
 .btn-secondary:hover {
-  background-color: $dark-gray;
+  background-color: $primary-dark-blue;
   color: white;
 }
 
@@ -189,7 +189,7 @@ a {
   padding: 2rem 4rem;
   align-items: center;
   justify-content: space-between;
-  color: $blue-10;
+  color: $text-dark;
   overflow: hidden;
   gap: $padding-large;
 }
@@ -213,7 +213,7 @@ a {
 }
 
 .navIcon i:hover {
-  color: $yellow-100;
+  color: $text-dark;
 
   transition: 0.25s;
 }
@@ -268,7 +268,7 @@ a {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  background-color: $blue-30;
+  background-color: $card-light;
   padding: $padding-medium;
 }
 
@@ -301,7 +301,7 @@ a {
 }
 
 .modal-content h2 {
-  color: $text-on-light;
+  color: $text-dark;
 }
 
 .dec-form-wrapper {

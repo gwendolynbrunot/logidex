@@ -1,10 +1,15 @@
 // logidex/app/page.tsx
 import Link from "next/link";
+import Image from 'next/image';
+import PersonIcon from './assets/icons/person-icon.svg';
 
 export default function Home() {
   return (
-    <div className="page-wrapper">
-      <h1 className="h1">Dashboard</h1>
+    <div className="dashboard-wrapper">
+      <div className="title-wrapper">
+        <Image src={PersonIcon} alt="Person Icon" />
+        <h1 className="">Dashboard</h1>
+      </div>
       <div className="container-fluid dashboard-container">
         <section className="dashboard-top-actions">
           <div className="pending-decisions-wrapper">

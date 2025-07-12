@@ -1,29 +1,42 @@
-import 'bootstrap-icons/font/bootstrap-icons.css';
+// logidex/app/layout.tsx
+import { Mona_Sans, Roboto_Slab } from 'next/font/google';
 import "./styles/globals.scss";
-import { ModalProvider } from './context/ModalContext';
-import ModalRoot from './components/ModalRoot';
 import { ReactNode } from "react";
 import Navbar from "./components/layout/Navbar";
-import NewDecisionButton from './components/new_decision_button';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+const monaSans = Mona_Sans({
+  subsets: ['latin'],
+  weight: [
+    '200', '300', '400', '500', '600', '700', '800', '900',
+  ],
+  style: ['normal', 'italic'],
+  variable: '--font-mona-sans',
+  display: 'swap',
+});
+
+const robotoSlab = Roboto_Slab({
+  subsets: ['latin'],
+  weight: [
+    '100', '200', '300', '400', '500', '600', '700', '800', '900',
+  ],
+  style: ['normal'],
+  variable: '--font-roboto-slab',
+  display: 'swap',
+});
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${monaSans.variable} ${robotoSlab.variable}`}>
       <body className="container-fluid">
-        <ModalProvider>
-          <div className="row site-wrapper">
-            <div className="navbar">
-              <Navbar />
-              <div className="new-dec-btn-wrapper">
-                <NewDecisionButton />
-              </div>
-            </div>
-            <div className="main-app-content">
-              <main className="main-content-wrapper">{children}</main>
-            </div>
+        <div className="row site-wrapper">
+          <div className="navbar">
+            <Navbar />
           </div>
-          <ModalRoot />
-        </ModalProvider>
+          <div className="flex-grow-1 main-app-content">
+            <main className="main-content-wrapper">{children}</main>
+          </div>
+        </div>
       </body>
     </html>
   );

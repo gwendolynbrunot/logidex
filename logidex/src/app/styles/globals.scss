@@ -1,224 +1,237 @@
 @import  "bootstrap/dist/css/bootstrap.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200..900&display=swap');
 
 // Brand Theme
-// Colors
-$red-100: #EE7676;
-$red-90: #F08484;
-$red-80: #F19191;
-$red-70: #F39F9F;
-$red-60: #F5ADAD;
-$red-50: #F7BBBB;
-$red-40: #F8C8C8;
-$red-30: #FAD6D6;
-$red-20: #FCE4E4;
-$red-10: #FEF2F2;
-$yellow-100: #F2D67D;
-$yellow-90: #F3DB8A;
-$yellow-80: #F4DE97;
-$yellow-70: #F6E3A4;
-$yellow-60: #F7E6B1;
-$yellow-50: #F8EBBE;
-$yellow-40: #F9EFCB;
-$yellow-30: #FBF3D8;
-$yellow-20: #FCF7E5;
-$yellow-10: #FEFBF2;
-$blue-100: #7093EB;
-$blue-90: #7F9EED;
-$blue-80: #8DA9EF;
-$blue-70: #9BB4F1;
-$blue-60: #A9BEF3;
-$blue-50: #B8C9F5;
-$blue-40: #C6D4F7;
-$blue-30: #D5DFF9;
-$blue-20: #E2E9FB;
-$blue-10: #F1F5FD;
 
-$dark-blue: #323C55;
+/* --- Colors --- */
 
-$text-on-dark: #FFFFFF;
-$text-on-light: $dark-blue;
+// Primary
+$primary-dark-blue: #293648;
+$primary-off-white: #F6F7F9;
+$primary-white: #FFFFFF;
 
-$background-light: $blue-10;
-$background-dark: $dark-blue;
+// Accent
+$accent-pink: #F15BB5;
+$accent-green: #AEFF4C;
+$accent-teal: #44B2E2;
 
-$border-dark: $dark-blue;
+// Text
+$text-light: $primary-off-white;
+$text-dark: $primary-dark-blue;
+$text-link: #0065F2;
+$text-link-light: #C7DDFF;
 
-// Placeholder Colors
-$dark-gray: rgb(55, 55, 55);
-$medium-gray: rgb(112, 112, 112);
-$light-gray: rgb(222, 222, 222);
+// Surface
+$background-light: $primary-white;
+$background-dark: $primary-dark-blue;
+$card-light: $primary-off-white;
+$card-dark: $primary-dark-blue;
 
-// Spacing
-$sp-xx-large: 12rem;
-$sp-x-large: 9rem;
-$sp-large: 6rem;
-$sp-medium: 3rem;
-$sp-small: 1.5rem;
-$sp-x-small: 0.65rem;
+// Border
+$border-light: #D9DBE3;
+$border-dark: #58595d;
 
-// Standard Border Radius
+// Indicator
+$indicator-in-progress: #F15BB5;
+$indicator-draft: #E26E44;
+$indicator-in-review: #BF00FF;
+$indicator-approved: #69CF55;
+$indicator-completed: #5081EB;
+
+/* --- Spacing --- */
+
+// Padding
+$padding-x-small: 1rem; // 16px
+$padding-small: 1.5rem; // 24px
+$padding-medium: 3rem; // 48px
+$padding-large: 6rem; // 96px
+
+// Gap
+$gap-x-small: 1rem; // 16px
+$gap-small: 1.5rem; // 24px
+$gap-smedium: 1.875rem; // 30px
+$gap-medium: 3rem; // 48px
+$gap-large: 6rem; // 96px
+
+// Border Radius
 $border-radius: 100px;
+$border-radius-card: 1rem;
 
-// Font Styles
-$h1-size: 3.3rem;
-$h2-size: 2rem;
-$p-large-size: 1.4rem;
-$p-small-size: 1.2rem;
-$p-x-small-size: 1rem;
-$p-large-size: 2rem;
-$a-size-small: 1.2rem;
+/* --- Fonts --- */
 
-$primary-font-family: "Mada", sans-serif;
+// Fonts
+$primary-font-family: var(--font-mona-sans), sans-serif;
+$secondary-font-family: var(--font-roboto-slab), serif;
 
 body {
   font-family: $primary-font-family;
   font-optical-sizing: auto;
   font-style: normal;
-  font-weight: 400;
   background-color: $background-light;
-  color: $text-on-light;
+  color: $text-dark;
   height: 100vh;
 }
 
-h1, h2, p, a {
-  font-weight: 400;
+h1, h2, h2, p {
+  font-family: $primary-font-family;
 }
 
 h1 {
-  font-size: $h1-size;
+  font-size: 2.75rem;
+  line-height: 4.125rem;
+  font-weight: 600; // Bold
 }
 
 h2 {
-  font-size: $h2-size;
+  font-size: 2.125rem;
+  line-height: 3.188rem;
+  font-weight: 500; // Semi Bold
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-weight: 600; // Bold
+}
+
+.small-label {
+  text-transform: uppercase;
+  font-family: $primary-font-family;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 p, li {
-  font-size: $p-small-size;
+  font-size: 1.125rem;
+  line-height: 1.813rem;
+  font-weight: 300; // Regular
+}
+
+a, .data-text {
+  font-family: $secondary-font-family;
 }
 
 a {
-  font-size: $a-size-small;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+  font-weight: 400; // Regular
+  color: $text-link;
+  text-decoration: underline;
+}
+
+.data-text {
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+  font-weight: 600; // Semi Bold
+}
+
+.menu-link, .menu-link-active {
+  font-family: $primary-font-family;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+.menu-link {
+  color: $text-light;
+  font-weight: 400; // Medium
+}
+
+.menu-link-active {
+  color: $text-dark;
+  font-weight: 700; // Extra Bold
+}
+
+.button-text {
+  font-family: $primary-font-family;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+  font-weight: 600; // Bold
 }
 
 // Main Layout
 .site-wrapper {
-  display: flex;
   height: 100%;
+  padding: $padding-small;
+  gap: $gap-medium;
 }
 
 .main-app-content {
-  height: calc(100% - 150px);
-  padding: $sp-large $sp-large $sp-medium $sp-large;
+  max-height: calc(100vh - $padding-large);
+  overflow-y: scroll;
+  padding-top: $padding-medium;
+  width: auto;
 }
 
 .main-content-wrapper {
   height: 100%;
 }
 
-// Button Styles
-.btn {
+.title-wrapper {
   display: flex;
-  align-items: center;
-  gap: $sp-x-small;
-  border-radius: 30px;
-  padding: 5px 20px;
-  border: none;
-  font-size: $p-small-size;
-  font-weight: 500;
-  width: max-content;
-
-  transition: 0.25s;
-}
-
-.btn-primary-on-light {
-  background-color: $dark-blue;
-  border: solid 3px $border-dark;
-  color: $text-on-dark;
-}
-
-.btn-primary-on-light:hover {
-  background-color: transparent;
-  border: solid 3px $border-dark;
-  color: $text-on-light;
-}
-
-.btn-secondary-on-dark {
-  background-color: transparent;
-  border: solid 3px white;
-  color: white;
-}
-
-.btn-secondary-on-dark:hover {
-  background-color: $yellow-100;
-  border-color: $yellow-100;
-  color: $text-on-light;
-}
-
-.btn-secondary:hover {
-  background-color: $dark-gray;
-  color: white;
-}
-
-.btn-icon {
-  padding-top: 2px;
+  gap: $gap-small;
 }
 
 // Navbar Styles
 .navbar {
   display: flex;
-  position: absolute;
   justify-content: center;
   align-items: center;
-  height: fit-content;
-  width: 100%;
-  padding: 0px 24%;
-  bottom: 50px;
-  gap: $sp-medium;
+  width: fit-content;
+  gap: $padding-medium;
 }
 
 .navbar-wrapper {
   display: flex;
   justify-content: center;
   background-color: $background-dark;
-  border-radius: 60px;
+  border-radius: 1.5rem;
+  height: 100%;
 }
 
 .navbar-inner {
   display: flex;
-  flex-direction: row;
-  height: 80px;
-  width: 100%;
-  padding: 2rem 4rem;
+  flex-direction: column;
+  height: 100%;
+  width: fit-content;
+  padding: $padding-large 0 $padding-large $padding-small;
   align-items: center;
   justify-content: space-between;
-  color: $blue-10;
+  color: $text-dark;
   overflow: hidden;
-  gap: $sp-large;
 }
 
 .navbar-links-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
-  gap: $sp-large;
+  gap: $padding-medium;
   width: 100%;
 }
 
 .navbar-links-wrapper a {
   width: 100%;
   text-decoration: none;
+  color: $text-light;
+}
+
+.navLink, .navLink-active {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem $padding-medium 0.75rem $padding-small;
+}
+
+.navLink-active {
+  background-color: $background-light;
+  border-radius: 40px 0 0 40px;
 }
 
 .navIcon {
-  color: white;
+  color: $text-light;
   font-size: 1.75rem;
 }
 
-.navIcon i:hover {
-  color: $yellow-100;
-
-  transition: 0.25s;
+svg.navIcon.active path {
+  fill: $accent-pink;
 }
 
 //New Decision Button
@@ -227,9 +240,9 @@ a {
 }
 
 .new-decision-btn {
-  color: #323C55;
-  background-color: #7093EB;
-  border: #7093EB 3px solid;
+  color: $text-light;
+  background-color: $background-dark;
+  border: $border-dark 3px solid;
 }
 
 .new-icon {
@@ -240,11 +253,55 @@ a {
 
 // }
 
+// Button Styles
+.btn {
+  display: flex;
+  align-items: center;
+  gap: $padding-x-small;
+  border-radius: 30px;
+  padding: 5px 20px;
+  border: none;
+  width: max-content;
+
+  transition: 0.25s;
+}
+
+.btn-primary-on-light {
+  background-color: $primary-dark-blue;
+  border: solid 3px $border-dark;
+  color: $text-light;
+}
+
+.btn-primary-on-light:hover {
+  background-color: transparent;
+  border: solid 3px $border-dark;
+  color: $text-dark;
+}
+
+.btn-secondary-on-dark {
+  background-color: transparent;
+  border: solid 3px white;
+  color: white;
+}
+
+.btn-secondary-on-dark:hover {
+  background-color: $background-dark;
+  border-color: $primary-dark-blue;
+  color: $text-dark;
+}
+
+.btn-secondary:hover {
+  background-color: $primary-dark-blue;
+  color: white;
+}
+
+.btn-icon {
+  padding-top: 2px;
+}
+
 // Home Page Dashboard Styles
 .page-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: $sp-medium;
   height: 100%;
 }
 
@@ -253,9 +310,15 @@ a {
   flex-direction: column;
   height: 100%;
   height: 100%;
-  gap: $sp-medium;
+  gap: $gap-small;
   align-items: stretch;
   padding: 0;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-medium;
 }
 
 .dashboard-top-actions {
@@ -263,16 +326,17 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
-  height: 50%;
-  gap: $sp-medium;
+  height: auto;
+  gap: $gap-small;
 }
 
 .pending-decisions-wrapper, .recent-activity-wrapper, .quick-actions {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  background-color: $blue-30;
-  padding: $sp-medium;
+  background-color: $card-light;
+  padding: $padding-medium;
+  gap: $gap-medium;
 }
 
 .quick-actions {
@@ -281,8 +345,8 @@ a {
 
 .quick-actions-links {
   display: flex;
-  width: 100%;
-  gap: $sp-small;
+  width: auto;
+  gap: $padding-small;
 }
 
 // Modal Style
@@ -300,26 +364,26 @@ a {
   width: fit-content;
   height: fit-content;
   border-radius: 20px;
-  padding: $sp-small;
+  padding: $padding-small;
 }
 
 .modal-content h2 {
-  color: $text-on-light;
+  color: $text-dark;
 }
 
 .dec-form-wrapper {
-  padding: 0 $sp-medium $sp-small $sp-medium;
+  padding: 0 $padding-medium $padding-small $padding-medium;
 }
 
 .dec-form {
   display: flex;
   flex-direction: column;
   min-width: 350px;
-  gap: $sp-small;
+  gap: $padding-small;
 }
 
 .dec-form input, .dec-form textarea {
-  font-size: $p-small-size;
+  font-size: 1rem;
   padding: 15px 20px;
   border: 1px $border-dark solid;
 }
@@ -353,13 +417,13 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $sp-medium;
+  gap: $padding-medium;
   height: fit-content;
   width: fit-content;
   min-width: 500px;
   background-color: $background-dark;
   border-radius: 20px;
-  padding: $sp-medium;
+  padding: $padding-medium;
 }
 
 .decision-form-input {
@@ -371,6 +435,16 @@ a {
 // .sign-out-wrapper {
 
 // }
+
+.sign-out {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: $text-light;
+  background-color: transparent;
+  border: none;
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {

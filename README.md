@@ -2,7 +2,7 @@
 **Logidex** is a smart decision-tracking platform for teams to document, approve, and audit workflows with clarity.
 
 ## 🧱 Stack
-- Frontend: Next.js + Tailwind CSS + Shadcn/UI
+- Frontend: Next.js + SCSS
 - State: React Query + Zustand
 - Backend: Supabase (Auth, DB, File Storage)
 

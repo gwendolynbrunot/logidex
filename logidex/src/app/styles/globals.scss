@@ -124,18 +124,15 @@ a {
   font-weight: 600; // Semi Bold
 }
 
-.menu-link, .menu-link-active {
+.menuLink {
+  color: $text-light;
   font-family: $primary-font-family;
   font-size: 1.25rem;
+  font-weight: 400; // Medium
   line-height: 1.875rem;
 }
 
-.menu-link {
-  color: $text-light;
-  font-weight: 400; // Medium
-}
-
-.menu-link-active {
+.menuLink.active {
   color: $text-dark;
   font-weight: 700; // Extra Bold
 }
@@ -199,39 +196,41 @@ a {
   overflow: hidden;
 }
 
-.navbar-links-wrapper {
+.navbar-items-wrapper {
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: $padding-medium;
+  gap: $gap-medium;
   width: 100%;
 }
 
-.navbar-links-wrapper a {
+.navbar-items-wrapper a {
   width: 100%;
   text-decoration: none;
   color: $text-light;
 }
 
-.navLink, .navLink-active {
+.navbar-links-wrapper {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem $padding-medium 0.75rem $padding-small;
+  flex-direction: column;
+  gap: $gap-medium;
 }
 
-.navLink-active {
-  background-color: $background-light;
+.navLink {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem $padding-medium 0.75rem $padding-small;
   border-radius: 40px 0 0 40px;
+}
+
+.navLink.active {
+  background-color: $background-light;
 }
 
 .navIcon {
   color: $text-light;
   font-size: 1.75rem;
-}
-
-svg.navIcon.active path {
-  fill: $accent-pink;
+  margin-right: $padding-x-small;
 }
 
 //New Decision Button
@@ -432,10 +431,6 @@ svg.navIcon.active path {
   width: 100%;
 }
 
-// .sign-out-wrapper {
-
-// }
-
 .sign-out {
   display: flex;
   flex-direction: column;
@@ -444,6 +439,12 @@ svg.navIcon.active path {
   color: $text-light;
   background-color: transparent;
   border: none;
+
+  transition: 0.25s ease-in-out;
+}
+
+.sign-out:hover {
+  opacity: 0.5;
 }
 
 // Small devices (landscape phones, 576px and up)

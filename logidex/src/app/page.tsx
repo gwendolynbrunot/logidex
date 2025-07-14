@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from 'next/image';
 import PersonIcon from './assets/icons/person-icon.svg';
+import CardList from "./components/CardList";
 
 export default function Home() {
   return (
@@ -12,21 +13,21 @@ export default function Home() {
       </div>
       <div className="container-fluid dashboard-container">
         <section className="dashboard-top-actions">
-          <div className="pending-decisions-wrapper">
-            <h2 className="">Pending Decisions</h2>
-            <p className="">No pending decisions right now.</p>
+          <div className="recent-decisions-wrapper">
+            <h2 className="">Recently Logged Decisions</h2>
+            <CardList maxItems={4} variant="tile" themeVariant="light" />
           </div>
-          <div className="recent-activity-wrapper">
-            <h2 className="">Recent Activity</h2>
+          <div className="insights-wrapper">
+            <h2 className="">Insights at a Glance</h2>
             <ul className="">
               <li>No recent activity yet.</li>
             </ul>
           </div>
         </section>
 
-        <section className="quick-actions">
-          <h2 className="">Quick Actions</h2>
-          <div className="quick-actions-links">
+        <section className="in-progress">
+          <h2 className="">In Progress</h2>
+          <div className="in-progress-links">
             <Link href="/decisions/new" className="">New Decision</Link>
             <Link href="/decisions" className="">View All</Link>
           </div>

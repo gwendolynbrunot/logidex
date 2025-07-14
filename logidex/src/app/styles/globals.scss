@@ -1,66 +1,5 @@
+@import '../styles/variables';
 @import  "bootstrap/dist/css/bootstrap.min.css";
-
-// Brand Theme
-
-/* --- Colors --- */
-
-// Primary
-$primary-dark-blue: #293648;
-$primary-off-white: #F6F7F9;
-$primary-white: #FFFFFF;
-
-// Accent
-$accent-pink: #F15BB5;
-$accent-green: #AEFF4C;
-$accent-teal: #44B2E2;
-
-// Text
-$text-light: $primary-off-white;
-$text-dark: $primary-dark-blue;
-$text-link: #0065F2;
-$text-link-light: #C7DDFF;
-
-// Surface
-$background-light: $primary-white;
-$background-dark: $primary-dark-blue;
-$card-light: $primary-off-white;
-$card-dark: $primary-dark-blue;
-
-// Border
-$border-light: #D9DBE3;
-$border-dark: #58595d;
-
-// Indicator
-$indicator-in-progress: #F15BB5;
-$indicator-draft: #E26E44;
-$indicator-in-review: #BF00FF;
-$indicator-approved: #69CF55;
-$indicator-completed: #5081EB;
-
-/* --- Spacing --- */
-
-// Padding
-$padding-x-small: 1rem; // 16px
-$padding-small: 1.5rem; // 24px
-$padding-medium: 3rem; // 48px
-$padding-large: 6rem; // 96px
-
-// Gap
-$gap-x-small: 1rem; // 16px
-$gap-small: 1.5rem; // 24px
-$gap-smedium: 1.875rem; // 30px
-$gap-medium: 3rem; // 48px
-$gap-large: 6rem; // 96px
-
-// Border Radius
-$border-radius: 100px;
-$border-radius-card: 1rem;
-
-/* --- Fonts --- */
-
-// Fonts
-$primary-font-family: var(--font-mona-sans), sans-serif;
-$secondary-font-family: var(--font-roboto-slab), serif;
 
 body {
   font-family: $primary-font-family;
@@ -71,7 +10,7 @@ body {
   height: 100vh;
 }
 
-h1, h2, h2, p {
+h1, h2, h3, h4, p {
   font-family: $primary-font-family;
 }
 
@@ -93,9 +32,22 @@ h3 {
   font-weight: 600; // Bold
 }
 
+h4 {
+  font-size: 1.313rem;
+  line-height: 1.938rem;
+  font-weight: 600; // Bold
+}
+
+.h4-style {
+  font-size: 1.313rem;
+  line-height: 1.938rem;
+  font-weight: 600; // Bold
+}
+
 .small-label {
   text-transform: uppercase;
   font-family: $primary-font-family;
+  font-weight: 600; // Bold
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -142,6 +94,12 @@ a {
   font-size: 1.125rem;
   line-height: 1.688rem;
   font-weight: 600; // Bold
+}
+
+.status-align {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 // Main Layout
@@ -329,20 +287,22 @@ a {
   gap: $gap-small;
 }
 
-.pending-decisions-wrapper, .recent-activity-wrapper, .quick-actions {
+.recent-decisions-wrapper, .insights-wrapper, .in-progress {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  background-color: $card-light;
+  background-color: $surface-light;
   padding: $padding-medium;
   gap: $gap-medium;
 }
 
-.quick-actions {
+.in-progress {
   height: 50%;
 }
 
-.quick-actions-links {
+.in-progress-links {
   display: flex;
   width: auto;
   gap: $padding-small;

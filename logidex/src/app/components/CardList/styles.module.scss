@@ -1,0 +1,11 @@
+@import '../../styles/variables';
+
+.cardsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap-medium;
+}
+
+.cardsList > * {
+  flex: 1 1 350px; /* grow/shrink but prefer 300px width */
+}

@@ -19,18 +19,12 @@ export default function Home() {
           </div>
           <div className="insights-wrapper">
             <h2 className="">Insights at a Glance</h2>
-            <ul className="">
-              <li>No recent activity yet.</li>
-            </ul>
           </div>
         </section>
 
         <section className="in-progress">
           <h2 className="">In Progress</h2>
-          <div className="in-progress-links">
-            <Link href="/decisions/new" className="">New Decision</Link>
-            <Link href="/decisions" className="">View All</Link>
-          </div>
+          <CardList maxItems={5} variant="compact" themeVariant="light" />
         </section>
       </div>
     </div>

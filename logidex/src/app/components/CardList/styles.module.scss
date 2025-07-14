@@ -6,6 +6,10 @@
     gap: $gap-medium;
 }
 
+.cardsListAutoSpace {
+    gap: auto;
+}
+
 .cardsList > * {
-  flex: 1 1 350px; /* grow/shrink but prefer 300px width */
+  flex: 0 0 350px; // grow/shrink but prefer 300px width
 }

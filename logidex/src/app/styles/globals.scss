@@ -103,6 +103,10 @@ a {
 }
 
 // Main Layout
+hr {
+  margin: 0;
+}
+
 .site-wrapper {
   height: 100%;
   padding: $padding-small;
@@ -281,7 +285,6 @@ a {
 .dashboard-top-actions {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   width: 100%;
   height: auto;
   gap: $gap-small;
@@ -291,11 +294,14 @@ a {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
   border-radius: 20px;
   background-color: $surface-light;
   padding: $padding-medium;
   gap: $gap-medium;
+}
+
+.recent-decisions-wrapper {
+  width: fit-content;
 }
 
 .in-progress {

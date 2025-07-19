@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.cardsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $gap-medium;
+}
+
+.cardsListAutoSpace {
+}
+
+.cardsList > * {
+  flex: 1 0 350px; // grow/no shrink, but prefer 350px width
+}

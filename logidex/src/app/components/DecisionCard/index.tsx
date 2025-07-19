@@ -30,13 +30,13 @@ export default function DecisionCard({
         {variant === 'full' && (
             <>
                 <div className={styles.cardHeader}>
-                    <h3 className={styles.cardTitle}>{title}</h3>
+                    <h4 className={styles.cardTitle}>{title}</h4>
                 </div>
 
                 <hr></hr>
 
                 <div className={styles.cardMetadata}>
-                    <div>Status <span className={statusClass}></span>{status}</div>
+                    <div className={styles.statusWrapper}>Status <div className={statusClass}></div> {status}</div>
                     <div>Owner {owner}</div>
                     <div>Created {createdDate}</div>
                     <div>Last Updated {lastUpdatedDate}</div>
@@ -101,21 +101,42 @@ export default function DecisionCard({
         {variant === 'compact' && (
             <>
                 <div className={styles.cardHeader}>
-                    <h3 className={styles.cardTitle}>{title}</h3>
+                    <h4 className={styles.cardTitle}>{title}</h4>
                 </div>
 
                 <hr></hr>
 
-                <div className={styles.cardMetadata}>
-                    <div>Status <span className={statusClass}></span>{status}</div>
-                    <div>Owner {owner}</div>
-                    <div>Created {createdDate}</div>
-                    <div>Last Updated {lastUpdatedDate}</div>
+                <div className={styles.cardMetadataWrapper}>
+                    <div className={styles.cardMetadataRow}>
+                        <div className={styles.labelWrapper + " " + "small-label"}>Status</div>
+                        <div className={styles.dataWrapper}>
+                            <div className="status-align"><div className={statusClass}></div><div className="data-text">{status}</div></div>
+                        </div>
+                    </div>
+                    <div className={styles.cardMetadataRow}>
+                        <div className={styles.labelWrapper + " " + "small-label"}>Owner</div>
+                        <div className={styles.dataWrapper + " " + "data-text"}>
+                            {owner}
+                        </div>
+                    </div>
+                    <div className={styles.cardMetadataRow}>
+                        <div className={styles.labelWrapper + " " + "small-label"}>Created</div>
+                        <div className={styles.dataWrapper + " " + "data-text"}>
+                            {createdDate}
+                        </div>
+                    </div>
+                    <div className={styles.cardMetadataRow}>
+                        <div className={styles.labelWrapper + " " + "small-label"}>Last Updated</div>
+                        <div className={styles.dataWrapper + " " + "data-text"}>
+                            {lastUpdatedDate}
+                        </div>
+                    </div>
                 </div>
 
                 <hr></hr>
 
                 <div className={styles.cardSummarySection}>
+                    <div className={styles.labelWrapper + " " + "small-label"}>Summary</div>
                     {summary && <p className={styles.cardSummary}>{summary}</p>}
                 </div>
 

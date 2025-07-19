@@ -1,5 +1,5 @@
-@import '../styles/variables';
-@import  "bootstrap/dist/css/bootstrap.min.css";
+@import "../styles/variables.scss";
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 body {
   font-family: $primary-font-family;
@@ -47,15 +47,20 @@ h4 {
 .small-label {
   text-transform: uppercase;
   font-family: $primary-font-family;
-  font-weight: 600; // Bold
+  font-weight: 700; // ExtraBold
   font-size: 1rem;
   line-height: 1.5rem;
+  letter-spacing: 0.02rem;
 }
 
 p, li {
   font-size: 1.125rem;
   line-height: 1.813rem;
   font-weight: 300; // Regular
+}
+
+p {
+  margin-bottom: 0;
 }
 
 a, .data-text {
@@ -114,7 +119,7 @@ hr {
 }
 
 .main-app-content {
-  max-height: calc(100vh - $padding-large);
+  max-height: calc(100vh - 3.4rem);
   overflow-y: scroll;
   padding-top: $padding-medium;
   width: auto;
